@@ -9,6 +9,7 @@
 
 @import url('css/base.css');
 @import url('css/skeleton.css');
+@import url('css/icons.css');
 
 /* Table of Content
 ==================================================
@@ -21,11 +22,21 @@
 ================================================== */
 
 body{}
-.upperdeck{max-height: 50px; background-color: #72dbee; color: #fff; padding: 14px 0px; background-image: url('images/upperdeck-back.jpg'); background-position: left center; background-repeat: repeat-x; }
-.upperdeck span{color: #000;}
+.upperdeck{max-height: 50px; background-color: #72dbee; color: #fff; padding: 14px 0px; background-image: url('images/upperdeck-back.jpg'); background-position: left center; background-repeat: repeat; }
+.gethelp span{color: #2b5472; display: inline-block; margin-left: 10px;}
+.gethelp{text-transform: uppercase; font-size: 14px;}
+.upperdecklinks{text-align: right;}
+ul#toplinks{ display: inline-block; margin: 0px; padding: 0px;}
+ul#toplinks li{ display: inline-block; margin: 0px 5px; padding: 0px; font-size: 11px; text-transform: uppercase; font-weight: bold;}
+ul#toplinks li a{text-decoration: none; color: #fff;}
+ul#toplinks li.carticon a{color: #2b5472;}
+ul#toplinks li.carticon:before{content: "\e07a"; font-family: 'ElegantIcons'; color: #2b5472; font-size: 16px; padding: 0px 10px 0px 0px; }
+ul#toplinks li a:hover{}
 
 /* #Page Styles
 ================================================== */
+
+
 
 /* #Media Queries
 ================================================== */
