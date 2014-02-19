@@ -7,6 +7,9 @@
 * 6/20/2012
 */
 
+@import url('css/base.css');
+@import url('css/skeleton.css');
+
 /* Table of Content
 ==================================================
 	#Site Styles
@@ -16,6 +19,10 @@
 
 /* #Site Styles
 ================================================== */
+
+body{}
+.upperdeck{max-height: 50px; background-color: #72dbee; color: #fff; padding: 14px 0px; background-image: url('images/upperdeck-back.jpg'); background-position: left center; background-repeat: repeat-x; }
+.upperdeck span{color: #000;}
 
 /* #Page Styles
 ================================================== */
