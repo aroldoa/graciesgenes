@@ -7,8 +7,7 @@
 * 6/20/2012
 */
 
-@import url('css/base.css');
-@import url('css/skeleton.css');
+@import url('css/1140.css');
 @import url('css/icons.css');
 
 /* Table of Content
@@ -33,11 +32,11 @@ ul#toplinks li.carticon a{color: #2b5472;}
 ul#toplinks li.carticon:before{content: "\e07a"; font-family: 'ElegantIcons'; color: #2b5472; font-size: 16px; padding: 0px 10px 0px 0px; }
 ul#toplinks li a:hover{}
 .wrap{height: 2000px; background-color: #fff;}
-.shadow{-moz-box-shadow: 0 0 30px 2px #999;-webkit-box-shadow: 0 0 30px 2px #999;}
-footer{background-color: #f8f8f8; max-height: 50px; padding: 12px 0px; bottom: 0px; position: absolute; width: 960px;}
+.shadow{}
+footer{background-color: #f8f8f8; max-height: 50px; padding: 12px 0px; bottom: 0px; position: absolute; }
 .copyright{font-size: 12px; color: #929292;}
-.copyright p{padding: 5px 0px 0px 30px; margin: 0px;}
-.primo{text-align: right;}
+.copyright p{padding: 5px 0px 0px 0px; margin: 0px;}
+.primo{text-align: right; padding: 0px 0px 0px 0px;}
 
 
 /* #Page Styles
