@@ -15,14 +15,12 @@
 	<!-- Mobile Specific Metas
   ================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
 	<!-- CSS
   ================================================== -->
 	<link rel="stylesheet" href="style.css">
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-
 	<!-- Favicons
 	================================================== -->
 	<link rel="shortcut icon" href="images/favicon.ico">
@@ -55,9 +53,10 @@
 		<div class="column4 prefix6">
 			<a href="#"><img src="images/logo.png" alt="Gracies Genes"/></a>
 		</div>
-		<div class="column4 prefix2">
+		<div class="column4 prefix2 search">
 			<form>
-				<input type="text" value=""/>
+				<input class="mainsearch" type="text" value="SEARCH HERE"/>
+				<input type="button" class="searchicon" value=""/>
 			</form>
 		</div>
 	</header><!-- end of header area -->
@@ -85,11 +84,25 @@
 	<div class="products-slider row">
 		<div class="column16">
 			<h2><span>Featured Products</span></h2>
+			<ul class="products">
+				<li><a href="#"><img src="images/product.jpg" width="190px" alt=""/></a></li>
+				<li><a href="#"><img src="images/product.jpg" width="190px" alt=""/></a></li>
+				<li><a href="#"><img src="images/product.jpg" width="190px" alt=""/></a></li>
+				<li><a href="#"><img src="images/product.jpg" width="190px" alt=""/></a></li>
+				<li><a href="#"><img src="images/product.jpg" width="190px" alt=""/></a></li>
+			</ul>
 		</div>
 	</div><!-- end of featured products -->
 	<div class="products-slider row">
 		<div class="column16">
 			<h2><span>Sale Items</span></h2>
+			<ul class="products">
+				<li><a href="#"><img src="images/product.jpg" width="190px" alt=""/></a></li>
+				<li><a href="#"><img src="images/product.jpg" width="190px" alt=""/></a></li>
+				<li><a href="#"><img src="images/product.jpg" width="190px" alt=""/></a></li>
+				<li><a href="#"><img src="images/product.jpg" width="190px" alt=""/></a></li>
+				<li><a href="#"><img src="images/product.jpg" width="190px" alt=""/></a></li>
+			</ul>
 		</div>
 	</div><!-- end of best sellers -->
 	<div class="promoarea row">
@@ -102,21 +115,48 @@
 	</div><!-- end of promo area -->
 	<div class="socialarea row">
 		<div class="column5 prefix6">
-			social here
+			<ul class="socialbuttons">
+				<li><a href="#"><img src="images/facebook.png" alt="Facebook"/></a></li>
+				<li><a href="#"><img src="images/twitter.png" alt="Facebook"/></a></li>
+				<li><a href="#"><img src="images/linkedin.png" alt="Facebook"/></a></li>
+				<li><a href="#"><img src="images/pinterest.png" alt="Facebook"/></a></li>
+				<li><a href="#"><img src="images/google+.png" alt="Facebook"/></a></li>
+			</ul>
 		</div>
 	</div><!-- end of social area -->
 	<div class="pre-footer row">
 		<div class="column4">
 			<h5>Customer Support</h5>
+			<ul>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Shipping & Returns</a></li>
+				<li><a href="#">Our Locations</a></li>
+				<li><a href="#">Help with an Order</a></li>
+			</ul>
 		</div>
 		<div class="column4">
 			<h5>Recent Articles</h5>
+			<ul class="recentarticles">
+				<li><a href="#">
+					<div class="post-title">How to dress up and go to the radio but make sure you stand out from the crowd!</div>
+					<div class="post-date">1.31.2014</div>
+				</a></li>
+				<li><a href="#">
+					<div class="post-title">How to dress up and go to the radio but make sure you stand out from the crowd!</div>
+					<div class="post-date">1.31.2014</div>
+				</a></li>
+			</ul>
 		</div>
 		<div class="column4">
 			<h5>Instagram</h5>
 		</div>
 		<div class="column4">
 			<h5>Join Our Newsletter</h5>
+			<form>
+				<input class="field" type="text" value="" name="firstname"/>
+				<input class="field" type="text" value="" name="lastname"/>
+				<input class="btn" type="submit" value="Submit" name="submit" />
+			</form>
 		</div>
 	</div><!-- end of pre-footer area -->
 <div class="clear"></div>
