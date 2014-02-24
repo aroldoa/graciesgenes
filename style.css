@@ -112,5 +112,8 @@ ul#subimages li a{}
 .prod-info .summary{margin: 20px 0px 0px 0px; line-height: 24px; font-size: 13px; color: #838383;}
 .prod-info button{margin: 30px 0px 0px 0px; background-color: #a996c1; border: none; padding: 15px 35px; font-size: 13px; text-transform: uppercase; color: #fff;}
 .prod-crossell{text-align: center; border: 1px solid #ededed; padding: 15px 0px;}
+.prod-crossell h2{font-size: 11px; border: none;line-height: 16px; margin: -40px 0px 0px 0px; padding: 0px 0px 15px 0px; color: #af98cb; }
+.prod-crossell h2 span{background-color: #fff; padding: 2px 0px; line-height: 16px;}
 ul#crossell{margin: 0px; padding: 0px;}
 ul#crossell li{display: inline-block; margin: 0px; padding: 0px 0px 10px 0px;}
+.prod-upsell{text-align: center; margin: 30px 0px 0px 0px; padding: 40px 0px;}

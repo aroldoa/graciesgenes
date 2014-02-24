@@ -26,6 +26,7 @@
 		</div>
 	</div><!-- end of product info -->
 	<div class="column2 prod-crossell alpha">
+		<h2><span>WE<br/>RECOMMEND</span></h2>
 		<ul id="crossell">
 		<li><a href="#"><img src="images/product.jpg" alt="crossell" width="80px;"/></a></li>
 		<li><a href="#"><img src="images/product.jpg" alt="crossell" width="80px;"/></a></li>
@@ -33,7 +34,33 @@
 		</ul>
 	</div><!-- end of product crossell area -->
 <div class="clear"></div>
-	<div class="column16 prod-upsell"></div><!-- end of product upsell area -->
+
+<div class="column16 prod-upsell">
+		<h2><span>You Might Also Like</span></h2>
+
+			<ul class="products-listing">
+				<li><a href="#"><img src="images/product.jpg" width="195px" alt=""/></a>
+					<h3>Product Title Here</h3>
+					<span class="price">$33</span>
+				</li>
+				<li><a href="#"><img src="images/product.jpg" width="195px" alt=""/></a>
+					<h3>Product Title Here</h3>
+					<span class="price">$33</span>
+				</li>
+				<li><a href="#"><img src="images/product.jpg" width="195px" alt=""/></a>
+					<h3>Product Title Here</h3>
+					<span class="price">$33</span>
+				</li>
+				<li><a href="#"><img src="images/product.jpg" width="195px" alt=""/></a>
+					<h3>Product Title Here</h3>
+					<span class="price">$33</span>
+				</li>
+				<li><a href="#"><img src="images/product.jpg" width="195px" alt=""/></a>
+					<h3>Product Title Here</h3>
+					<span class="price">$33</span>
+				</li>
+			</ul>
+	</div><!-- end of product upsell area -->
 </div>
 
 <div class="clear"></div>
