@@ -26,21 +26,19 @@ get_header(); ?>
 	<div class="column16">
 		<h2><span>Featured Products</span></h2>
 		<ul class="products">
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
+		<?php  
+		    $args = array( 'post_type' => 'product', 'posts_per_page' => 10,'meta_key' => '_featured',  'meta_value' => 'yes' );
+
+		    $loop = new WP_Query( $args );
+
+		    while ( $loop->have_posts() ) : $loop->the_post(); 
+			    global $product; 
+			 	echo '<li><a href="'.get_permalink().'">' . woocommerce_get_product_thumbnail().' '.the_title().'</a></li>';
+		    endwhile; 
+
+		    wp_reset_query(); 
+
+		?>
 		</ul>
 	</div>
 </div><!-- end of featured products -->
@@ -48,21 +46,32 @@ get_header(); ?>
 	<div class="column16">
 		<h2><span>Sale Items</span></h2>
 		<ul class="products">
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
-			<li><a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/product.jpg" width="190px" alt=""/></a></li>
+		<?php  
+		    $args = array(
+		    	'post_type' => 'product', 
+		    	'posts_per_page' => 10,
+		    	'meta_key' => '_sale_price',  
+		    	'meta_query' => array(
+					array(
+						'key' => '_sale_price',
+						'value' => 0,
+						'compare' => '>',
+						'type' => 'numeric'
+					)
+				)
+		    );
+
+		    $loop = new WP_Query( $args );
+		    print_r($loop);
+
+		    while ( $loop->have_posts() ) : $loop->the_post(); 
+			    global $product; 
+			 	echo '<li><a href="'.get_permalink().'">' . woocommerce_get_product_thumbnail().' '.the_title().'</a></li>';
+		    endwhile; 
+
+		    wp_reset_query(); 
+
+		?>
 		</ul>
 	</div>
 </div><!-- end of best sellers -->
