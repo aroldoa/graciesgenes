@@ -18,10 +18,30 @@
     add_action('init', 'removeHeadLinks');
     remove_action('wp_head', 'wp_generator');
 
+    register_nav_menus( array(
+    	'primary' => 'Primary Navigation',
+    	'pages' => 'Pages Navigation',
+		'footer' => 'Footer Navigation'
+
+    	) );
+
     if (function_exists('register_sidebar')) {
     	register_sidebar(array(
     		'name' => 'Sidebar Widgets',
     		'id'   => 'sidebar-widgets',
+    		'description'   => 'These are widgets for the sidebar.',
+    		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    		'after_widget'  => '</div>',
+    		'before_title'  => '<h2>',
+    		'after_title'   => '</h2>'
+    	));
+    }
+
+
+  if (function_exists('register_sidebar')) {
+    	register_sidebar(array(
+    		'name' => 'Page Sidebar',
+    		'id'   => 'page-sidebar',
     		'description'   => 'These are widgets for the sidebar.',
     		'before_widget' => '<div id="%1$s" class="widget %2$s">',
     		'after_widget'  => '</div>',

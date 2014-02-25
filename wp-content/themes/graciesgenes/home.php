@@ -69,10 +69,10 @@ get_header(); ?>
 
 <div class="promoarea row">
 	<div class="column8">
-		<img src="<?php bloginfo( 'template_directory' ); ?>/images/promo1.jpg" alt="promo1"/>
+		<a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/promo1.jpg" alt="promo1"/></a>
 	</div>
 	<div class="column8">
-		<img src="<?php bloginfo( 'template_directory' ); ?>/images/promo2.jpg" alt="promo2"/>
+		<a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/promo2.jpg" alt="promo2"/></a>
 	</div>
 </div><!-- end of promo area -->
 
