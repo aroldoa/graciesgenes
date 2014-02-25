@@ -35,15 +35,17 @@ nav ul li a:hover{
 	background: #6fcce3;
 	color:#fff;
 }
-nav ul li a.drop:after{
+nav ul li a.drop:after, .menu-item-has-children > a:after{
 	content: "\43"; 
 	font-family: 'ElegantIcons'; 
 	color: #6fcce3; 
 	font-size: 16px; 
 	padding: 0px 0px 0px 10px; 
 	vertical-align: bottom; 
+	/*margin-top: 25px;
+	float:left;*/
 }
-nav ul li a.drop:hover:after{
+nav ul li a.drop:hover:after, .menu-item-has-children > a:hover:after{
 	color:#fff;
 }
 nav ul li.last{
