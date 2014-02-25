@@ -10,6 +10,7 @@ Version: 1
 @import url('css/1140.css');
 @import url('css/icons.css');
 @import url('inc/bxslider/jquery.bxslider.css');
+@import url('css/menu.css');
 
 @media screen {
 
@@ -40,12 +41,7 @@ ul#toplinks li a:hover{}
 .wrap{background-color: #fff;}
 .shadow{}
 header{padding: 30px 0px 0px 0px;}
-nav{background-color: #f3f3f3; min-height: 70px; background-image: url('images/nav-back.jpg'); background-repeat: repeat-x; text-align: center; margin: 0px; padding: 0px;}
-nav ul{margin: 25px 0px 0px 0px;}
-nav ul li{display: inline; padding: 0px 30px; background-image: url('images/nav-sep.jpg'); background-repeat: no-repeat; background-position: center right; font-size: 14px;}
-nav ul li.last{background: none;}
-nav ul li.drop:after{content: "\43"; font-family: 'ElegantIcons'; color: #6fcce3; font-size: 16px; padding: 0px 0px 0px 10px; vertical-align: bottom; }
-nav ul li a{text-decoration: none;}
+
 .promobanner{background-image: url('images/promo-banner.png'); background-position: center center; background-repeat: no-repeat; min-height: 75px; text-align: center;}
 .promobanner .title{font-family: sans-serif; font-size: 28px; color: #fff; font-weight: lighter; margin: 15px 0px 0px 0px;}
 .promobanner .title span{}
@@ -79,7 +75,7 @@ h2{text-transform: uppercase; font-family: sans-serif; font-size: 18px; color: #
 h2 span{background-color: #fff; margin: 0px; padding: 0px 20px; }
 .product-pages{margin: 50px 0px 0px 0px;}
 .product-pages h1{font-size: 22px; font-weight: lighter; margin: 0px 0px 10px 0px; padding: 0px;}
-.main{margin: 22px 0px 20px 0px;}
+.main{margin: 0px 0px 20px 0px;}
 .main h2{text-align: center;}
 .main p{font-size: 14px;  line-height: 21px; color: #494949;}
 
@@ -97,12 +93,6 @@ ul.products-listing span.price{font-size: 13px; color: #85759b;}
 
 .widget{margin: 0px 0px 40px 0px; padding: 0px 0px 0px 10px;}
 .widget h2{border: none; font-size: 14px; text-transform: uppercase; color: #222; border-bottom: 1px dotted #b1b1b1; line-height: 18px; padding: 0px 0px 8px 0px; margin: 0px 0px 20px 0px;}
-
-ul#menu-pages-menu{}
-ul#menu-pages-menu li{display: block; margin: 0px; padding: 0px 0px 10px 0px; font-size: 13px;}
-ul#menu-pages-menu li a{text-decoration: none;}
-ul#menu-pages-menu li a:hover{text-decoration: none; color: gray;}
-ul#menu-pages-menu li:before{content: "\35"; font-family: 'ElegantIcons'; color: #66bbcf; font-size: 16px; padding: 0px 10px 0px 0px;}
 
 /* Products
 --------------------------------------------------- */

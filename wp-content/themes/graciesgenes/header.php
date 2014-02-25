@@ -73,14 +73,53 @@
 			</form>
 		</div>
 	</header><!-- end of header area -->
-	<nav class="row">
+	<?php
+		$defaults = array(
+			'theme_location'  => 'primary',
+			'menu'            => '',
+			'container'       => 'nav',
+			'container_class' => 'row',
+			'container_id'    => '',
+			'menu_class'      => '',
+			'menu_id'         => 'nav',
+			'echo'            => true,
+			'fallback_cb'     => 'wp_page_menu',
+			'before'          => '',
+			'after'           => '',
+			'link_before'     => '',
+			'link_after'      => '',
+			'items_wrap'      => '<ul id="topnav" class="%2$s">%3$s</ul>',
+			'depth'           => 0,
+			'walker'          => ''
+		);?>
+	
+		<?php wp_nav_menu( $defaults );?>
+		
+	
+
+				
+	<!-- <nav class="row">
 		<ul>
 			<li><a href="#">New Arrivals</a></li>
-			<li class="drop"><a href="#">Clothing</a></li>
+			<li>
+				<a href="#" class="drop">Clothing</a>
+				<ul>
+					<li>
+						<a href="#" class="drop">Clothing 2</a>
+						<ul>
+							<li><a href="#">More Clothing 1</a></li>
+							<li><a href="#">More Clothing 2</a></li>
+							<li><a href="#">More Clothing 3</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Clothing 3</a></li>
+					<li><a href="#">Clothing 4</a></li>
+				</ul>
+			</li>
 			<li><a href="#">Jewelry</a></li>
-			<li class="drop"><a href="#">Baby Wear</a></li>
+			<li><a href="#" class="drop">Baby Wear</a></li>
 			<li><a href="#">Gift Ideas</a></li>
 			<li><a href="#">On Sale</a></li>
 			<li class="last"><a href="#">Look Book</a></li>
 		</ul>
-	</nav><!-- end of main naviation -->
+	</nav> --><!-- end of main naviation -->

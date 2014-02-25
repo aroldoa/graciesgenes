@@ -1,0 +1,84 @@
+nav{
+	background-color: #f3f3f3;
+	min-height: 70px;
+	background-image: url('../images/nav-back.jpg'); 
+	background-repeat: repeat-x; 
+	text-align: center; 
+	margin: 0px; 
+	padding: 0px;
+}
+nav ul{
+	/*margin: 25px 0px 0px 0px;*/
+}
+nav ul li a, nav ul li{
+	float:left;
+}
+nav ul li{
+	/*margin-top: 25px;*/
+	list-style: none;
+	position:relative;
+	/*display: inline; */
+	background-image: url('../images/nav-sep.jpg'); 
+	background-repeat: no-repeat; 
+	background-position: center right; 
+	font-size: 14px;
+}
+nav ul li a{
+	padding:16px 30px;
+	text-decoration: none;
+	background-color: #f3f3f3;
+	margin:12px;
+}
+nav ul li a:hover{
+	background: #6fcce3;
+	color:#fff;
+}
+nav ul li a.drop:after{
+	content: "\43"; 
+	font-family: 'ElegantIcons'; 
+	color: #6fcce3; 
+	font-size: 16px; 
+	padding: 0px 0px 0px 10px; 
+	vertical-align: bottom; 
+}
+nav ul li a.drop:hover:after{
+	color:#fff;
+}
+nav ul li.last{
+	background: none;
+}
+
+/*submenu*/
+nav ul li ul{
+	display: none;
+	position:absolute;
+	left:0;
+	margin:0;
+	padding:0;
+	top:100%;
+}
+nav ul li:hover > ul{
+	display:block;
+}
+nav ul li ul li, nav ul li ul li a{
+	float:none;
+}
+nav ul li ul li{
+	_display:inline;
+}
+nav ul li ul li a{
+	width:150px;
+	display:block;
+	margin:0;
+}
+
+/* Sub submenu*/
+nav ul li ul li ul{
+	display: none;
+}
+nav ul li ul li:hover ul{
+	left:100%;
+	top:0;
+}
+
+
