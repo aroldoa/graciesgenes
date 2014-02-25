@@ -81,8 +81,8 @@ h2 span{background-color: #fff; margin: 0px; padding: 0px 20px; }
 
 /* Featured Products Styles
 --------------------------------------------------- */
-ul.products{display: inline-block; margin: 0px; padding: 0px;}
-ul.products li{display: inline-block; margin: 0px; padding: 0px 8px;}
+ul.products{display: inline; margin: 0px; padding: 0px;}
+ul.products li{display: inline; margin: 0px; padding: 0px 8px;}
 ul.products-listing{display: inline-block; margin: 0px; padding: 0px;}
 ul.products-listing li{display: inline-block; margin: 0px 0px 30px 0px; padding: 0px 10px 0px 0px;}
 ul.products-listing h3{font-size: 13px; font-weight: normal; margin:5px 0px;}

@@ -25,7 +25,22 @@ get_header( 'shop' ); ?>
 </div>
 
 <div class="product-category">
-	<div class="column12 main">
+	<div class="column12 main prefix1">
+
+		<div class="category-banner">
+<?php
+add_action( 'woocommerce_archive_description', 'woocommerce_category_image', 2 );
+function woocommerce_category_image() {
+    if ( is_product_category() ){
+	    global $wp_query;
+	    $cat = $wp_query->get_queried_object();
+	    $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
+	    $image = wp_get_attachment_url( $thumbnail_id );
+	    if ( $image ) {
+		    echo '<img src="' . $image . '" alt="" />';
+		}
+	}
+}		?></div>
 
 	<?php
 		/**
@@ -36,12 +51,6 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_before_main_content' );
 	?>
-
-		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-
-			<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
-
-		<?php endif; ?>
 
 		<?php do_action( 'woocommerce_archive_description' ); ?>
 
@@ -95,4 +104,5 @@ get_header( 'shop' ); ?>
 
 	</div><!-- end of 12 column main area -->
 </div><!-- end of product category div -->
+<div class="clear"></div>
 <?php get_footer( 'shop' ); ?>

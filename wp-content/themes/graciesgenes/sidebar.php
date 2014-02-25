@@ -1,5 +1,5 @@
   <div class="sidebar">
-	  	<div class="column4">
+	  	<div class="column3">
 		  	<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Sidebar Widgets')) : else : ?>
 			<div class="widget">
 				<h2>Shop By</h2>

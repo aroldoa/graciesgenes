@@ -10,6 +10,9 @@
 	   wp_enqueue_script('jquery');
 	}
 
+
+	remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20, 0);
+
 	// Clean up the <head>
 	function removeHeadLinks() {
     	remove_action('wp_head', 'rsd_link');
