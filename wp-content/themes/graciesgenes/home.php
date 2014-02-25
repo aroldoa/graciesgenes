@@ -68,12 +68,35 @@ get_header(); ?>
 </div><!-- end of best sellers -->
 
 <div class="promoarea row">
-	<div class="column8">
-		<a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/promo1.jpg" alt="promo1"/></a>
-	</div>
-	<div class="column8">
-		<a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/promo2.jpg" alt="promo2"/></a>
-	</div>
-</div><!-- end of promo area -->
 
+<?php
+
+$args = array(
+	'post_type' => 'promotions',
+	'posts_per_page' => 2,
+	'order' => 'ASC'
+);
+
+$query = new WP_Query ($args); ?>
+
+<?php if ( $query->have_posts() ) : ?>
+
+<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+
+ <div class="column8">
+		<a href="<?php the_permalink(); ?>">
+
+			<?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+			the_post_thumbnail('', array('class' => 'scale-with-grid alignleft ')); } ?>
+
+		</a>
+	</div>
+
+<?php endwhile; ?>
+
+<?php else:  ?>
+  <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+<?php endif; ?>
+
+</div><!-- end of promo area -->
 <?php get_footer(); ?>

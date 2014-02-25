@@ -79,7 +79,7 @@ h2{text-transform: uppercase; font-family: sans-serif; font-size: 18px; color: #
 h2 span{background-color: #fff; margin: 0px; padding: 0px 20px; }
 .product-pages{margin: 50px 0px 0px 0px;}
 .product-pages h1{font-size: 22px; font-weight: lighter; margin: 0px 0px 10px 0px; padding: 0px;}
-.main{margin: 0px 0px 20px 0px;}
+.main{margin: 22px 0px 20px 0px;}
 .main h2{text-align: center;}
 .main p{font-size: 14px;  line-height: 21px; color: #494949;}
 
@@ -97,6 +97,12 @@ ul.products-listing span.price{font-size: 13px; color: #85759b;}
 
 .widget{margin: 0px 0px 40px 0px; padding: 0px 0px 0px 10px;}
 .widget h2{border: none; font-size: 14px; text-transform: uppercase; color: #222; border-bottom: 1px dotted #b1b1b1; line-height: 18px; padding: 0px 0px 8px 0px; margin: 0px 0px 20px 0px;}
+
+ul#menu-pages-menu{}
+ul#menu-pages-menu li{display: block; margin: 0px; padding: 0px 0px 10px 0px; font-size: 13px;}
+ul#menu-pages-menu li a{text-decoration: none;}
+ul#menu-pages-menu li a:hover{text-decoration: none; color: gray;}
+ul#menu-pages-menu li:before{content: "\35"; font-family: 'ElegantIcons'; color: #66bbcf; font-size: 16px; padding: 0px 10px 0px 0px;}
 
 /* Products
 --------------------------------------------------- */

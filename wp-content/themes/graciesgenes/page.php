@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 
 <div class="product-pages">
-	<?php get_sidebar(); ?>
+	<?php get_sidebar('page'); ?>
 </div><!-- end of sidebar area -->
 
 <div class="product-category">
-	<div class="column11 main prefix1">
+	<div class="column12 main prefix1">
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 

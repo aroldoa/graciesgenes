@@ -11,13 +11,8 @@
 	</div><!-- end of social area -->
 	<div class="pre-footer row">
 		<div class="column4">
-			<h5>Customer Support</h5>
-			<ul>
-				<li><a href="#">About Us</a></li>
-				<li><a href="#">Shipping & Returns</a></li>
-				<li><a href="#">Our Locations</a></li>
-				<li><a href="#">Help with an Order</a></li>
-			</ul>
+			<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Sidebar')) : else : ?>
+			<?php endif; ?>
 		</div>
 		<div class="column4">
 			<h5>Recent Articles</h5>

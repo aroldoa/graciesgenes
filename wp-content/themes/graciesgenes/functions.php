@@ -1,7 +1,7 @@
 <?php
 
 	// Add RSS links to <head> section
-	automatic_feed_links();
+	add_theme_support( 'automatic-feed-links' );
 
 	// Load jQuery
 	if ( !is_admin() ) {
@@ -25,6 +25,42 @@
 
     	) );
 
+    add_theme_support('post-thumbnails');
+
+    add_action('init', 'promotions');
+
+    function promotions()
+    {
+    	register_post_type('promotions',
+    		array(
+    			'labels' => array(
+    				'name' => __('Promotions'),
+    				'singular_name' => __('Promotion'),
+    				'all_items' => __('All Promotions'),
+    				'add_new' => __('Add New Promotion'),
+    				'add_new_item' => __('Add A New Promotion'),
+    				'new_item' => __('Add Promotion'),
+    				'edit_item' => __('Edit Promotion'),
+    			),
+    			'description' => 'Use this panel to add images to the site Promotions',
+    			'public' => true,
+    			'exclude_from_search' => true,
+    			'menu_position' => 26,
+    			'supports' => array(
+    				'title',
+    				'editor',
+    				'custom-fields',
+    				'excerpt',
+    				'thumbnail',
+    				'page-attributes'
+    			),
+    			// 'hierarchical' => true,
+    			'show_in_nav_menus' => false,
+    		)
+    	);
+    }
+
+
     if (function_exists('register_sidebar')) {
     	register_sidebar(array(
     		'name' => 'Sidebar Widgets',
@@ -47,6 +83,18 @@
     		'after_widget'  => '</div>',
     		'before_title'  => '<h2>',
     		'after_title'   => '</h2>'
+    	));
+    }
+
+     if (function_exists('register_sidebar')) {
+    	register_sidebar(array(
+    		'name' => 'Footer Sidebar',
+    		'id'   => 'footer-sidebar',
+    		'description'   => 'These are widgets for the sidebar.',
+    		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    		'after_widget'  => '</div>',
+    		'before_title'  => '<h5>',
+    		'after_title'   => '</h5>'
     	));
     }
 
