@@ -67,6 +67,17 @@
 			speed: 2500
 		});
 	});
+
+
+	(function(){
+			var navLi = $('nav li').children('ul').hide().end();
+
+			navLi.hover(function(){
+				$(this).find('> ul').stop(true, true).slideDown(250);
+			},function(){
+				$(this).find('> ul').stop(true, true).hide();
+			});
+		})();
 </script>
 <!-- End Document
 ================================================== -->
