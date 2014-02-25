@@ -13,6 +13,13 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 get_header( 'shop' ); ?>
 
+<div class="promobanner row">
+		<div class="column16">
+			<div class="title">FREE SHIPPING ON ALL ORDERS OVER $100</div>
+		</div>
+	</div><!-- end of promo banner -->
+<div class="clear"></div>
+<div class="product-pages">
 	<?php
 		/**
 		 * woocommerce_before_main_content hook
@@ -38,13 +45,6 @@ get_header( 'shop' ); ?>
 		do_action( 'woocommerce_after_main_content' );
 	?>
 
-	<?php
-		/**
-		 * woocommerce_sidebar hook
-		 *
-		 * @hooked woocommerce_get_sidebar - 10
-		 */
-		do_action( 'woocommerce_sidebar' );
-	?>
+</div>
 
 <?php get_footer( 'shop' ); ?>
