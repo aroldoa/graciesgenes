@@ -116,30 +116,3 @@
 	}
 
 	?>
-
-				
-	<!-- <nav class="row">
-		<ul>
-			<li><a href="#">New Arrivals</a></li>
-			<li>
-				<a href="#" class="drop">Clothing</a>
-				<ul>
-					<li>
-						<a href="#" class="drop">Clothing 2</a>
-						<ul>
-							<li><a href="#">More Clothing 1</a></li>
-							<li><a href="#">More Clothing 2</a></li>
-							<li><a href="#">More Clothing 3</a></li>
-						</ul>
-					</li>
-					<li><a href="#">Clothing 3</a></li>
-					<li><a href="#">Clothing 4</a></li>
-				</ul>
-			</li>
-			<li><a href="#">Jewelry</a></li>
-			<li><a href="#" class="drop">Baby Wear</a></li>
-			<li><a href="#">Gift Ideas</a></li>
-			<li><a href="#">On Sale</a></li>
-			<li class="last"><a href="#">Look Book</a></li>
-		</ul>
-	</nav> --><!-- end of main naviation -->

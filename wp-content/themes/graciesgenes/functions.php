@@ -11,7 +11,26 @@
 	}
 
 
-	remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20, 0);
+	//Reposition WooCommerce breadcrumb 
+    function woocommerce_remove_breadcrumb(){
+        remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
+    }
+
+    add_action('woocommerce_before_main_content', 'woocommerce_remove_breadcrumb');
+
+    function woocommerce_custom_breadcrumb(){
+        $args = array(
+            'delimiter'   => ' &#47; ',
+            'wrap_before' => '<div class="custom_breadcrumb" itemprop="breadcrumb">',
+            'wrap_after'  => '</div>',
+            'before'      => '',
+            'after'       => '',
+            'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' ),
+        );
+        woocommerce_breadcrumb($args);
+    }
+
+    add_action( 'woo_custom_breadcrumb', 'woocommerce_custom_breadcrumb' );
 
 	// Clean up the <head>
 	function removeHeadLinks() {
@@ -100,5 +119,8 @@
     		'after_title'   => '</h5>'
     	));
     }
+
+    //breadcrumb
+   
 
 ?>

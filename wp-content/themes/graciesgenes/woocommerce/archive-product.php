@@ -20,6 +20,7 @@ get_header( 'shop' ); ?>
 		 *
 		 * @hooked woocommerce_get_sidebar - 10
 		 */
+		do_action('woo_custom_breadcrumb'); 
 		do_action( 'woocommerce_sidebar' );
 	?>
 </div>
@@ -50,6 +51,7 @@ function woocommerce_category_image() {
 		 * @hooked woocommerce_breadcrumb - 20
 		 */
 		do_action( 'woocommerce_before_main_content' );
+		
 	?>
 
 		<?php do_action( 'woocommerce_archive_description' ); ?>
