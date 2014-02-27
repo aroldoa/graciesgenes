@@ -154,3 +154,36 @@ tr { page-break-inside: avoid; }
 a { text-decoration: none; color: black; }
 
 } /* END print media */
+
+/*breadcrumbs*/
+#breadcrumbs{
+    list-style:none;
+    margin:10px 0;
+    overflow:hidden;
+}
+ 
+#breadcrumbs li{
+    float:left;
+    margin-right:15px;
+}
+ 
+#breadcrumbs .separator{
+    font-weight:700;
+    font-size:20px;
+    color:#999;
+}
+
+.overlay{
+    position:relative;
+}
+#product_category_image_1{
+    display: none;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+#product_category_image_0, #product_category_image_1{
+
+}

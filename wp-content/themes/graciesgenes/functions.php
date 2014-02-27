@@ -32,6 +32,48 @@
 
     add_action( 'woo_custom_breadcrumb', 'woocommerce_custom_breadcrumb' );
 
+
+        
+    //Two images per item in category
+    function woocommerce_remove_product_thumbnail(){
+        remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10 );
+    }
+
+    add_action('woocommerce_before_shop_loop_item_title', 'woocommerce_remove_product_thumbnail');
+
+    function woocommerce_custom_product_category(){
+        global $post;
+        global $product;
+
+        $size = 'shop_catalog';
+        $attachment_ids = $product->get_gallery_attachment_ids();
+
+        if($attachment_ids){
+            $opening_container = '<div class="overlay">';
+
+            for($i=0; $i<=1;$i++){
+                $image_link = wp_get_attachment_url( $attachment_ids[$i] );
+                $image_metadata = wp_get_attachment_metadata( $attachment_ids[$i]);
+                if(isset($image_metadata['sizes'])){
+                    $image_size = $image_metadata['sizes'][$size];
+                }
+                
+                $img_tags .= '<img id="product_category_image_'. $i .'" src="' . $image_link . '" width="'. $image_size['width'] .'" height="'. $image_size['height'] .'"  />';
+            }
+            $closing_container = '</div>';
+            $images = $opening_container . $img_tags . $closing_container;
+            echo($images);
+        }elseif(has_post_thumbnail()){
+            echo (get_the_post_thumbnail( $post->ID, $size ));            
+        }
+        elseif ( wc_placeholder_img_src() )
+            echo (wc_placeholder_img( $size ));
+    }
+
+    add_action( 'woo_custom_product_category', 'woocommerce_custom_product_category' );
+
+    
+
 	// Clean up the <head>
 	function removeHeadLinks() {
     	remove_action('wp_head', 'rsd_link');

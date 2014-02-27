@@ -54,6 +54,7 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="<?php bloginfo( 'template_directory' ); ?>/inc/bxslider/jquery.bxslider.min.js"></script>
+<script src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.zoom.min.js"></script>
 
 <script type="text/javascript">
 	$(document).ready(function(){
@@ -77,7 +78,30 @@
 			},function(){
 				$(this).find('> ul').stop(true, true).hide();
 			});
-		})();
+
+			//zoom photo
+			// var img_url = $('a.zoom').find('img').attr('src');
+			// var myarr = img_url.split("338x504");
+			// var myvar = myarr[0] + "716x1024" + myarr[1];
+			// console.log(myvar);
+  	// 		$('a.zoom').zoom({url: myvar});
+
+
+	  	$('.overlay').hover(
+			function(){
+				$div = $(this);
+				$div.find('#product_category_image_0').stop(true, true).fadeTo(100,0);
+				$div.find('#product_category_image_1').stop(true, true).fadeIn(200);
+			},
+			function(){
+				$div.find('#product_category_image_1').stop(true, true).fadeOut(100);
+				$div.find('#product_category_image_0').stop(true, true).fadeTo(200,1);
+
+
+
+			}
+		);
+	})();
 </script>
 <!-- End Document
 ================================================== -->
