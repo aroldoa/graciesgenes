@@ -56,7 +56,8 @@
 				<li><a href="#">My Account</a></li>
 				<li><a href="#">Create an Account</a></li>
 				<li><a href="#">Contact Us</a></li>
-				<li class="carticon"><a href="#">$0.00</a></li>
+				<?php global $woocommerce; ?>
+				<li class="carticon"><a href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>"><?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?> - <?php echo $woocommerce->cart->get_cart_total(); ?></a></li>
 			</ul>
 		</div>
 	</div>
