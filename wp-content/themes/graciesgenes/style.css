@@ -138,7 +138,7 @@ ul#subimages li a{}
 .prod-crossell h2 span{background-color: #fff; padding: 2px 0px; line-height: 16px;}
 ul#crossell{margin: 0px; padding: 0px;}
 ul#crossell li{display: inline-block; margin: 0px; padding: 0px 0px 10px 0px;}
-.prod-upsell{text-align: center; margin: 30px 0px 0px 0px; padding: 40px 0px;}
+.prod-upsell{ text-align: center;}
 .summary{margin: 0px; padding: 0px 30px 0px 0px; float: left !important;}
 .summary p{font-size: 13px; line-height: 21px; color: #7f7f7f;}
 .woocommerce-tabs h3{margin:15px 0px 10px 0px; font-size: 16px;}
