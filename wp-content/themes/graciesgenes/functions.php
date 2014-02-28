@@ -61,8 +61,14 @@
                 if(isset($image_metadata['sizes'])){
                     $image_size = $image_metadata['sizes'][$size];
                 }
+<<<<<<< HEAD
 
                 $img_tags .= '<img id="product_category_image_'. $i .'" src="' . $image_link . '" width="'. $image_size['width'] .'" height="'. $image_size['height'] .'"  />';
+=======
+                
+                $img_tags .= '<img id="product_category_image_'. ($i+1) .'" src="' . $image_link . '" width="'. $image_size['width'] .'" height="'. $image_size['height'] .'"  />';
+
+>>>>>>> FETCH_HEAD
             }
             $closing_container = '</div>';
             $images = $opening_container . $img_tags . $closing_container;
