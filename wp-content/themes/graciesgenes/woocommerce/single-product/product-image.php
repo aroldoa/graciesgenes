@@ -27,13 +27,12 @@ global $post, $woocommerce, $product;
 			//first we need to get the url of the image
 			$image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'shop_single');
 
-			//we need to remove the default size in order to replace with larger image for zoom
-			$large_image = explode("338x504", $image_url[0]);
-			$large_image_url = $large_image[0] . '716x1024' . $large_image[1];
+			//now we need the url of the largest image (this will act as the zoom)
+			$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large');
 
 			//we need to add the data attribute that the jquery plugin needs for zoom
 			$image_tag = explode("<img",$image);
-			$image_tag_data_attr = 'data-zoom-image="'. $large_image_url .'" ';
+			$image_tag_data_attr = 'data-zoom-image="'. $large_image_url[0] .'" ';
 
 			//put everything back together ($image_tag[1] contains the rest of the img tag)
 			$image = '<img ' . $image_tag_data_attr . $image_tag[1];
