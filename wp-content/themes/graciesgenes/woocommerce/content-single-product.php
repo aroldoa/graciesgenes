@@ -1,3 +1,4 @@
+<div class="clear"></div>
 <?php
 /**
  * The template for displaying product content in the single-product.php template
@@ -11,6 +12,8 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 ?>
+
+
 
 <?php
 	/**
@@ -26,8 +29,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	 }
 ?>
 
+
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+	<div class="column6 prod-images omega">
 	<?php
 		/**
 		 * woocommerce_before_single_product_summary hook
@@ -37,9 +42,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		 */
 		do_action( 'woocommerce_before_single_product_summary' );
 	?>
+	</div><!-- end of product images -->
 
-	<div class="summary entry-summary">
 
+	<div class="column8 prod-info summary entry-summary">
 		<?php
 			/**
 			 * woocommerce_single_product_summary hook
@@ -54,7 +60,19 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			do_action( 'woocommerce_single_product_summary' );
 		?>
 
+		<?php do_action( 'woo_product_tabs' ); ?>
+
 	</div><!-- .summary -->
+
+<div class="column2 prod-crossell alpha">
+		<h2><span>WE<br/>RECOMMEND</span></h2>
+		<ul id="crossell">
+		<li><a href="#"><img src="images/product.jpg" alt="crossell" width="80px;"/></a></li>
+		<li><a href="#"><img src="images/product.jpg" alt="crossell" width="80px;"/></a></li>
+		<li><a href="#"><img src="images/product.jpg" alt="crossell" width="80px;"/></a></li>
+		</ul>
+	</div><!-- end of product crossell area -->
+
 
 	<?php
 		/**

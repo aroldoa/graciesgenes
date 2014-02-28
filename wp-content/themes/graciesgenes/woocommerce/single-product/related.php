@@ -31,9 +31,10 @@ $woocommerce_loop['columns'] = $columns;
 
 if ( $products->have_posts() ) : ?>
 
-	<div class="related products">
+	<div class="related products column16 prod-upsell">
 
-		<h2><?php _e( 'Related Products', 'woocommerce' ); ?></h2>
+		<h2><span>You Might Also Like</span></h2>
+
 
 		<?php woocommerce_product_loop_start(); ?>
 
@@ -44,9 +45,12 @@ if ( $products->have_posts() ) : ?>
 			<?php endwhile; // end of the loop. ?>
 
 		<?php woocommerce_product_loop_end(); ?>
+		</div>
 
-	</div>
+<div class="clear"></div>
 
 <?php endif;
 
 wp_reset_postdata();
+
+

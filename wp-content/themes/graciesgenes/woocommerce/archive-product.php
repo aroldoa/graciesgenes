@@ -20,14 +20,12 @@ get_header( 'shop' ); ?>
 		 *
 		 * @hooked woocommerce_get_sidebar - 10
 		 */
-		do_action('woo_custom_breadcrumb'); 
 		do_action( 'woocommerce_sidebar' );
 	?>
 </div>
 
 <div class="product-category">
 	<div class="column12 main prefix1">
-
 		<div class="category-banner">
 <?php
 add_action( 'woocommerce_archive_description', 'woocommerce_category_image', 2 );
@@ -51,7 +49,7 @@ function woocommerce_category_image() {
 		 * @hooked woocommerce_breadcrumb - 20
 		 */
 		do_action( 'woocommerce_before_main_content' );
-		
+
 	?>
 
 		<?php do_action( 'woocommerce_archive_description' ); ?>
@@ -67,6 +65,7 @@ function woocommerce_category_image() {
 				 */
 				do_action( 'woocommerce_before_shop_loop' );
 			?>
+
 
 			<?php woocommerce_product_loop_start(); ?>
 
