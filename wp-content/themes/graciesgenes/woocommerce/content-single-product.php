@@ -1,4 +1,5 @@
 <div class="clear"></div>
+<div class="column16">
 <?php
 /**
  * The template for displaying product content in the single-product.php template
@@ -89,5 +90,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	<meta itemprop="url" content="<?php the_permalink(); ?>" />
 
 </div><!-- #product-<?php the_ID(); ?> -->
+</div>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
