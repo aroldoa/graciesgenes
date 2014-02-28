@@ -73,6 +73,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		</ul>
 	</div><!-- end of product crossell area -->
 
+<div class="clear"></div>
+<div class="column16 prod-upsell">
 
 	<?php
 		/**
@@ -83,7 +85,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		 */
 		do_action( 'woocommerce_after_single_product_summary' );
 	?>
+	</div><!-- end of product upsell area -->
+</div>
 
+<div class="clear">
 	<meta itemprop="url" content="<?php the_permalink(); ?>" />
 
 </div><!-- #product-<?php the_ID(); ?> -->
