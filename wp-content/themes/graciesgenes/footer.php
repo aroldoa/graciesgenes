@@ -54,7 +54,8 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="<?php bloginfo( 'template_directory' ); ?>/inc/bxslider/jquery.bxslider.min.js"></script>
-<script src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.zoom.min.js"></script>
+
+<script src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.elevateZoom-3.0.8.min.js"></script>
 
 <script type="text/javascript">
 	$(document).ready(function(){
@@ -71,21 +72,16 @@
 
 
 	(function(){
-			var navLi = $('nav li').children('ul').hide().end();
+		var navLi = $('nav li').children('ul').hide().end();
 
-			navLi.hover(function(){
-				$(this).find('> ul').stop(true, true).slideDown(250);
-			},function(){
-				$(this).find('> ul').stop(true, true).hide();
-			});
+		navLi.hover(function(){
+			$(this).find('> ul').stop(true, true).slideDown(250);
+		},function(){
+			$(this).find('> ul').stop(true, true).hide();
+		});
 
-			//zoom photo
-			// var img_url = $('a.zoom').find('img').attr('src');
-			// var myarr = img_url.split("338x504");
-			// var myvar = myarr[0] + "716x1024" + myarr[1];
-			// console.log(myvar);
-  	// 		$('a.zoom').zoom({url: myvar});
-
+		//zoom photo
+		$("#zoom").elevateZoom();
 
 	  	$('.overlay').hover(
 			function(){
