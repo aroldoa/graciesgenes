@@ -62,7 +62,7 @@ get_header(); ?>
 		    );
 
 		    $loop = new WP_Query( $args );
-		    print_r($loop);
+		    // print_r($loop);
 
 		    while ( $loop->have_posts() ) : $loop->the_post(); 
 			    global $product; 
