@@ -11,7 +11,7 @@
     }
 
 
-    //Reposition WooCommerce breadcrumb 
+    //Reposition WooCommerce breadcrumb
     function woocommerce_remove_breadcrumb(){
         remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
     }
@@ -32,8 +32,12 @@
 
     add_action( 'woo_custom_breadcrumb', 'woocommerce_custom_breadcrumb' );
 
+	// Reposition of the WooCommerce Product Tabs
 
-        
+	    remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
+		add_action('woo_product_tabs', 'woocommerce_output_product_data_tabs');
+
+
     //Two images per item in category
     function woocommerce_remove_product_thumbnail(){
         remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10 );
@@ -68,7 +72,7 @@
                 if(isset($image_metadata['sizes'])){
                     $image_size = $image_metadata['sizes'][$size];
                 }
-                
+
                 $img_tags .= '<img id="product_category_image_'. ($i+1) .'" src="' . $image_link . '" width="'. $image_size['width'] .'" height="'. $image_size['height'] .'"  />';
             }
             $closing_container = '</div>';
@@ -84,7 +88,7 @@
 
     add_action( 'woo_custom_product_category', 'woocommerce_custom_product_category' );
 
-    
+
 
     // Clean up the <head>
     function removeHeadLinks() {
@@ -175,6 +179,6 @@
     }
 
     //breadcrumb
-   
+
 
 ?>
