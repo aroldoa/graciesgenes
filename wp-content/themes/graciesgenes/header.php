@@ -35,6 +35,7 @@
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=Gafata' rel='stylesheet' type='text/css'>
 
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
@@ -65,7 +66,7 @@
 <div class="container16 wrap shadow">
 	<header class="row">
 		<div class="column4 prefix6">
-			<a href="#"><img src="<?php bloginfo( 'template_directory' ); ?>/images/logo.png" alt="Gracies Genes"/></a>
+			<a href="/graciesgenes"><img src="<?php bloginfo( 'template_directory' ); ?>/images/logo.png" alt="Gracies Genes"/></a>
 		</div>
 		<div class="column4 prefix2 search">
 			<form>
@@ -93,27 +94,27 @@
 			'depth'           => 0,
 			'walker'          => ''
 		);?>
-	
+
 		<?php wp_nav_menu( $defaults );?>
-		
+
 	<?php
 	add_filter( 'wp_nav_menu_objects', 'add_menu_parent_class' );
 	function add_menu_parent_class( $items ) {
-		
+
 		$parents = array();
 		foreach ( $items as $item ) {
 			if ( $item->menu_item_parent && $item->menu_item_parent > 0 ) {
 				$parents[] = $item->menu_item_parent;
 			}
 		}
-		
+
 		foreach ( $items as $item ) {
 			if ( in_array( $item->ID, $parents ) ) {
-				$item->classes[] = 'menu-parent-item'; 
+				$item->classes[] = 'menu-parent-item';
 			}
 		}
-		
-		return $items;    
+
+		return $items;
 	}
 
 	?>
