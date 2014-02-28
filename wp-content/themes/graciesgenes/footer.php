@@ -1,3 +1,4 @@
+<div class="clear"></div>
 	<div class="socialarea row">
 		<div class="column5 prefix6">
 			<ul class="socialbuttons">

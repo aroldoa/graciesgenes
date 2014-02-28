@@ -143,6 +143,8 @@ ul#crossell li{display: inline-block; margin: 0px; padding: 0px 0px 10px 0px;}
 .summary p{font-size: 13px; line-height: 21px; color: #7f7f7f;}
 .woocommerce-tabs h3{margin:15px 0px 10px 0px; font-size: 16px;}
 .woocommerce-tabs{margin: 30px 0px 0px 0px;}
+.custom_breadcrumb{margin: -20px 0px 0px 0px; padding: 0px 0px 20px 0px;}
+.custom_breadcrumb, .custom_breadcrumb a{font-size: 12px;}
 
 } /* END screen media */
 
