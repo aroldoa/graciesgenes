@@ -24,6 +24,10 @@ switch( $template ) {
 	case 'twentyfourteen' :
 		echo '<div id="primary" class="content-area"><div id="content" role="main" class="site-content twentyfourteen"><div class="tfwc">';
 		break;
+	case 'graciesgenes' :
+		do_action('woo_custom_breadcrumb');
+		echo '<div id="container"><div id="content" role="main">';
+		break;
 	default :
 		echo '<div id="container"><div id="content" role="main">';
 		break;
