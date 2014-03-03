@@ -115,6 +115,18 @@ ul.wooproducts li .button{display: none;}
 
 .widget{margin: 0px 0px 40px 0px; padding: 0px 0px 0px 10px;}
 .widget h2{border: none; font-size: 14px; text-transform: uppercase; color: #222; border-bottom: 1px dotted #b1b1b1; line-height: 18px; padding: 0px 0px 8px 0px; margin: 0px 0px 20px 0px;}
+.widget ul{margin: 0px; padding: 0px; display: block;}
+.widget ul li{display: block; margin: 0px; padding: 0px 0px 10px 0px; font-size: 13px;}
+.widget ul li:hover{}
+.widget ul li:before{content: "\35"; font-family: 'ElegantIcons'; color: #66bbcf; font-size: 16px; padding: 0px 10px 0px 0px;}
+.widget ul li a{ text-decoration: none;}
+.widget ul li a:hover{}
+
+.widget_layered_nav ul{margin: 0px; padding: 0px; display: block;}
+.widget_layered_nav ul li{display: block; margin: 0px; padding: 0px 0px 10px 0px; font-size: 13px;}
+.widget_layered_nav ul li:hover{}
+.widget_layered_nav ul li a{text-decoration: none; color: #ca9cf2;}
+
 
 /* Products
 --------------------------------------------------- */
@@ -146,8 +158,8 @@ ul#crossell li{display: inline-block; margin: 0px; padding: 0px 0px 10px 0px;}
 .custom_breadcrumb{margin: -20px 0px 0px 10px; padding: 0px 0px 20px 0px;}
 .custom_breadcrumb, .custom_breadcrumb a{font-size: 12px;}
 .prod-images .images {width: 338px !important;}
-h1.entry-title{font-size: 28px; font-family: 'Gafata', sans-serif;}
-span .amount{}
+h1.entry-title{font-size: 28px; font-family: 'Gafata', sans-serif; margin: 0px; padding: 0px;}
+.entry-summary .amount{font-size: 16px; line-height: 38px;}
 } /* END screen media */
 
 

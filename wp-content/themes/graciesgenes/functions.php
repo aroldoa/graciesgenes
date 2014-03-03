@@ -2,6 +2,7 @@
 
     // Add RSS links to <head> section
     add_theme_support( 'automatic-feed-links' );
+    add_theme_support( 'woocommerce' );
 
     // Load jQuery
     if ( !is_admin() ) {
