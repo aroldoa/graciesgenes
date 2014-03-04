@@ -107,7 +107,7 @@ ul.wooproducts li .button{display: none;}
 .prod-upsell ul.wooproducts li h3{font-size: 14px; margin: 10px 0px 5px 0px; text-align: left !important;}
 .prod-upsell ul.wooproducts li a{text-decoration: none;}
 .prod-upsell ul.wooproducts li a h3{text-decoration: none; color: #222;}
-.prod-upsell ul.wooproducts li .price{display: block; font-size: 12px; margin: 0px 0px 20px 0px; text-align: left !important;}
+.prod-upsell ul.wooproducts li a span{display: block; color: #735f8e; font-size: 13px; margin: 0px 0px 20px 0px; text-align: left !important;}
 .prod-upsell ul.wooproducts li .button{display: none;}
 
 /* Sidebar Styles
@@ -140,7 +140,7 @@ ul#category-listing li a:hover{}
 ul#subimages{margin: 0px; padding: 0px;}
 ul#subimages li{margin: 0px; padding: 0px 1px 0px 0px; display: inline-block;}
 ul#subimages li a{}
-.prod-images{margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px; text-align: center;}
+.prod-images{margin: 0px 0px 0px 12px; padding: 0px 0px 0px 0px; text-align: center;}
 .prod-info{}
 .prod-info .lgprice{font-size: 21px; color: #85759b;}
 .prod-info .summary{margin: 20px 0px 0px 0px; line-height: 24px; font-size: 13px; color: #838383;}
@@ -224,5 +224,5 @@ a { text-decoration: none; color: black; }
 
 /*zoom and tabs layer fix*/
 .tabs{
-    z-index: -1;
+    z-index: 0;
 }
