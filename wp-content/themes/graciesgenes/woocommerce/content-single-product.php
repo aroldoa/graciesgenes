@@ -62,14 +62,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 	</div><!-- .summary -->
 
+
 <div class="column2 prod-crossell alpha">
-		<h2><span>WE<br/>RECOMMEND</span></h2>
-		<ul id="crossell">
-		<li><a href="#"><img src="images/product.jpg" alt="crossell" width="80px;"/></a></li>
-		<li><a href="#"><img src="images/product.jpg" alt="crossell" width="80px;"/></a></li>
-		<li><a href="#"><img src="images/product.jpg" alt="crossell" width="80px;"/></a></li>
-		</ul>
-	</div><!-- end of product crossell area -->
+	<?php the_widget( 'WC_Widget_Recently_Viewed','title=Recently Viewed&number=3', '' ); ?>
+</div><!-- end of product crossell area -->
 
 <div class="clear"></div>
 <div class="column16 prod-upsell">
@@ -81,7 +77,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		 * @hooked woocommerce_output_product_data_tabs - 10
 		 * @hooked woocommerce_output_related_products - 20
 		 */
-		do_action( 'woocommerce_after_single_product_summary' );
+		do_action('woocommerce_after_single_product_summary');
 	?>
 	</div><!-- end of product upsell area -->
 </div>
