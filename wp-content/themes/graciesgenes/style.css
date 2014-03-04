@@ -93,7 +93,7 @@ ul.products-listing span.price{font-size: 13px; color: #85759b;}
 /* Woocommerce styles
 ---------------------------------------------------- */
 
-ul.wooproducts{display: inline-block; margin: 0px; padding: 0px;}
+ul.wooproducts {display: inline-block; margin: 0px; padding: 0px;}
 ul.wooproducts li{display: inline-block; margin: 20px 0px; padding: 0px 10px 0px 0px; vertical-align: top;}
 ul.wooproducts li h3{font-size: 14px; margin: 10px 0px 5px 0px;}
 ul.wooproducts li a{text-decoration: none;}
@@ -101,7 +101,7 @@ ul.wooproducts li a h3{text-decoration: none; color: #222;}
 ul.wooproducts li .price{display: block; font-size: 12px; margin: 0px 0px 20px 0px;}
 ul.wooproducts li .button{display: none;}
 
-.prod-upsell ul.wooproducts{display: inline !important;}
+.prod-upsell{margin: 0px 0px 0px 20px !important; padding: 0px;}
 .prod-upsell ul.wooproducts li{ width: 190px !important; float:left !important; display: inline !important; margin: 0px 0px; padding: 0px 15px 0px 0px !important;}
 .prod-upsell ul.wooproducts li img{width: 190px !important;}
 .prod-upsell ul.wooproducts li h3{font-size: 14px; margin: 10px 0px 5px 0px; text-align: left !important;}
@@ -124,8 +124,10 @@ ul.wooproducts li .button{display: none;}
 
 .widget_layered_nav ul{margin: 0px; padding: 0px; display: block;}
 .widget_layered_nav ul li{display: block; margin: 0px; padding: 0px 0px 10px 0px; font-size: 13px;}
-.widget_layered_nav ul li:hover{}
-.widget_layered_nav ul li a{text-decoration: none; color: #ca9cf2;}
+.widget_layered_nav ul li:hover{text-decoration: underline;}
+.widget_layered_nav ul li a{text-decoration: none; color: #735f8e;}
+
+.widget_recently_viewed_products{margin: 0px; padding: 0px; text-align: center;}
 
 
 /* Products
@@ -140,12 +142,12 @@ ul#category-listing li a:hover{}
 ul#subimages{margin: 0px; padding: 0px;}
 ul#subimages li{margin: 0px; padding: 0px 1px 0px 0px; display: inline-block;}
 ul#subimages li a{}
-.prod-images{margin: 0px 0px 0px 12px; padding: 0px 0px 0px 0px; text-align: center;}
-.prod-info{}
+.prod-images{margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px; text-align: center;}
+.prod-info{float: left; margin: 0px; padding: 0px;}
 .prod-info .lgprice{font-size: 21px; color: #85759b;}
 .prod-info .summary{margin: 20px 0px 0px 0px; line-height: 24px; font-size: 13px; color: #838383;}
 .prod-info button{margin: 30px 0px 0px 0px; background-color: #a996c1; border: none; padding: 15px 35px; font-size: 13px; text-transform: uppercase; color: #fff;}
-.prod-crossell{text-align: center; border: 1px solid #ededed; padding: 15px 0px;}
+.prod-crossell{text-align: center; border: 1px solid #ededed; padding: 15px 0px; float: right;}
 .prod-crossell h2{font-size: 11px; border: none;line-height: 16px; margin: -40px 0px 0px 0px; padding: 0px 0px 15px 0px; color: #af98cb; }
 .prod-crossell h2 span{background-color: #fff; padding: 2px 0px; line-height: 16px;}
 ul#crossell{margin: 0px; padding: 0px;}
@@ -156,10 +158,17 @@ ul#crossell li{display: inline-block; margin: 0px; padding: 0px 0px 10px 0px;}
 .woocommerce-tabs h3{margin:15px 0px 10px 0px; font-size: 16px;}
 .woocommerce-tabs{margin: 30px 0px 0px 0px;}
 .custom_breadcrumb{margin: -20px 0px 0px 10px; padding: 0px 0px 20px 0px;}
-.custom_breadcrumb, .custom_breadcrumb a{font-size: 12px;}
-.prod-images .images {width: 338px !important;}
-h1.entry-title{font-size: 28px; font-family: 'Gafata', sans-serif; margin: 0px; padding: 0px;}
-.entry-summary .amount{font-size: 16px; line-height: 38px;}
+.custom_breadcrumb, .custom_breadcrumb a{font-size: 12px; text-decoration: none; }
+.custom_breadcrumb a{color: #735f8e;}
+.custom_breadcrumb a:hover{font-size: 12px; text-decoration: none; color: #18aec9;}
+.prod-images .images {width: 338px !important; padding: 0px 0px 0px 15px;}
+h1.entry-title{font-size: 32px; font-family: 'Gafata', sans-serif; margin: 0px; padding: 0px;}
+.entry-summary .amount{font-size: 18px; line-height: 38px; color: #735f8e;}
+.product_meta{font-size: 12px;}
+.product_meta span a{text-decoration: none;}
+.entry-summary form{margin: 10px 0px 0px 0px}
+table.variations tr{margin: 0px 0px 10px 0px; padding: 0px 0px; height: 30px;}
+a.reset_variations{margin:0px 0px 0px 0px; font-size: 13px; padding: 30px 0px 0px 0px;}
 } /* END screen media */
 
 

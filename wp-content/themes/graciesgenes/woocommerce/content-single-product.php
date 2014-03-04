@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div class="column6 prod-images omega">
+	<div class="column5 prod-images alpha">
 	<?php
 		/**
 		 * woocommerce_before_single_product_summary hook
@@ -43,7 +43,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	</div><!-- end of product images -->
 
 
-	<div class="column8 prod-info summary entry-summary">
+	<div class="column7 prod-info summary entry-summary prefix1">
 		<?php
 			/**
 			 * woocommerce_single_product_summary hook
@@ -63,13 +63,12 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	</div><!-- .summary -->
 
 
-<div class="column2 prod-crossell alpha">
+<div class="column2 prod-crossell omega">
 	<?php the_widget( 'WC_Widget_Recently_Viewed','title=Recently Viewed&number=3', '' ); ?>
 </div><!-- end of product crossell area -->
 
 <div class="clear"></div>
-<div class="column16 prod-upsell">
-
+<div class="prod-upsell">
 	<?php
 		/**
 		 * woocommerce_after_single_product_summary hook
