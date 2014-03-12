@@ -11,6 +11,14 @@
        wp_enqueue_script('jquery');
     }
 
+	add_filter( 'woocommerce_product_tabs', 'sb_woo_remove_reviews_tab', 98);
+
+	function sb_woo_remove_reviews_tab($tabs) {
+
+		unset($tabs['reviews']);
+
+	return $tabs;
+	}
 
     //Reposition WooCommerce breadcrumb
     function woocommerce_remove_breadcrumb(){
@@ -182,7 +190,7 @@
     // filter for number of related products
     function woo_related_products_limit() {
       global $product;
-        
+
         $args = array(
             'post_type'             => 'product',
             'no_found_rows'         => 1,
