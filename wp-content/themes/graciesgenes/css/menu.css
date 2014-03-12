@@ -8,18 +8,12 @@ nav{
 	padding: 0px;
 	z-index:9999;
 }
-nav ul{
-	/*margin: 25px 0px 0px 0px;*/
-}
 nav ul li a, nav ul li{
-	float:left;
-	text-align: center;
+	display:inline-block;
 }
 nav ul li{
-	/*margin-top: 25px;*/
 	list-style: none;
 	position:relative;
-	/*display: inline; */
 	background-image: url('../images/nav-sep.jpg');
 	background-repeat: no-repeat;
 	background-position: center right;
@@ -43,8 +37,6 @@ nav ul li a.drop:after, .menu-item-has-children > a:after{
 	font-size: 16px;
 	padding: 0px 0px 0px 10px;
 	vertical-align: bottom;
-	/*margin-top: 25px;
-	float:left;*/
 }
 nav ul li a.drop:hover:after, .menu-item-has-children > a:hover:after{
 	color:#fff;
