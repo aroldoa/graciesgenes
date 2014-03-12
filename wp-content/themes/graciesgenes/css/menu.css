@@ -1,10 +1,10 @@
 nav{
 	background-color: #f3f3f3;
 	min-height: 70px;
-	background-image: url('../images/nav-back.jpg'); 
-	background-repeat: repeat-x; 
-	text-align: center; 
-	margin: 0px; 
+	background-image: url('../images/nav-back.jpg');
+	background-repeat: repeat-x;
+	text-align: center;
+	margin: 0px;
 	padding: 0px;
 	z-index:9999;
 }
@@ -13,15 +13,16 @@ nav ul{
 }
 nav ul li a, nav ul li{
 	float:left;
+	text-align: center;
 }
 nav ul li{
 	/*margin-top: 25px;*/
 	list-style: none;
 	position:relative;
 	/*display: inline; */
-	background-image: url('../images/nav-sep.jpg'); 
-	background-repeat: no-repeat; 
-	background-position: center right; 
+	background-image: url('../images/nav-sep.jpg');
+	background-repeat: no-repeat;
+	background-position: center right;
 	font-size: 14px;
 	z-index:9999;
 }
@@ -36,12 +37,12 @@ nav ul li a:hover{
 	color:#fff;
 }
 nav ul li a.drop:after, .menu-item-has-children > a:after{
-	content: "\43"; 
-	font-family: 'ElegantIcons'; 
-	color: #6fcce3; 
-	font-size: 16px; 
-	padding: 0px 0px 0px 10px; 
-	vertical-align: bottom; 
+	content: "\43";
+	font-family: 'ElegantIcons';
+	color: #6fcce3;
+	font-size: 16px;
+	padding: 0px 0px 0px 10px;
+	vertical-align: bottom;
 	/*margin-top: 25px;
 	float:left;*/
 }
@@ -60,6 +61,7 @@ nav ul li ul{
 	margin:0;
 	padding:0;
 	top:100%;
+	text-align: left !important;
 }
 nav ul li:hover > ul{
 	display:block;

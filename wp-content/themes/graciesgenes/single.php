@@ -1,31 +1,31 @@
 <?php get_header(); ?>
 
+<div class="product-pages">
+	<?php get_sidebar(); ?>
+</div><!-- end of sidebar area -->
+
+<div class="product-category">
+	<div class="column12 main prefix1">
+
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
-			
-			<h2><?php the_title(); ?></h2>
-			
-			<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
+			<h2><span><?php the_title(); ?></span></h2>
 
 			<div class="entry">
-				
+
 				<?php the_content(); ?>
 
 				<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
-				
+
 				<?php the_tags( 'Tags: ', ', ', ''); ?>
 
 			</div>
-			
-			<?php edit_post_link('Edit this entry','','.'); ?>
-			
-		</div>
 
-	<?php comments_template(); ?>
+			<?php edit_post_link('Edit this entry','','.'); ?>
 
 	<?php endwhile; endif; ?>
-	
-<?php get_sidebar(); ?>
 
+	</div>
+</div>
+<div class="clear"></div>
 <?php get_footer(); ?>

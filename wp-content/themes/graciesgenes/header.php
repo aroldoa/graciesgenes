@@ -69,9 +69,9 @@
 			<a href="/graciesgenes"><img src="<?php bloginfo( 'template_directory' ); ?>/images/logo.png" alt="Gracies Genes"/></a>
 		</div>
 		<div class="column4 prefix2 search">
-			<form>
-				<input class="mainsearch" type="text" value="SEARCH HERE"/>
-				<input type="button" class="searchicon" value=""/>
+			<form action="<?php bloginfo('siteurl'); ?>" id="searchform" method="get">
+				<input class="mainsearch" type="text" name="s" value="SEARCH HERE" />
+				<input type="submit" class="searchicon" value="" id="searchsubmit"/>
 			</form>
 		</div>
 	</header><!-- end of header area -->

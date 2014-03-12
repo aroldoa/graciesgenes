@@ -41,7 +41,6 @@ ul#toplinks li a:hover{}
 .wrap{background-color: #fff;}
 .shadow{}
 header{padding: 30px 0px 0px 0px;}
-
 .promobanner{background-image: url('images/promo-banner.png'); background-position: center center; background-repeat: no-repeat; min-height: 75px; text-align: center;}
 .promobanner .title{font-family: sans-serif; font-size: 28px; color: #fff; font-weight: lighter; margin: 15px 0px 0px 0px;}
 .promobanner .title span{}
@@ -89,6 +88,8 @@ ul.products-listing li{display: inline-block; margin: 0px 0px 30px 0px; padding:
 ul.products-listing h3{font-size: 13px; font-weight: normal; margin:5px 0px;}
 ul.products-listing span.price{font-size: 13px; color: #85759b;}
 
+h3{margin: 0px 0px 10px 0px;}
+.entry-result{margin: 0px 0px 30px 0px;}
 
 /* Woocommerce styles
 ---------------------------------------------------- */
