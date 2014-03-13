@@ -19,7 +19,7 @@
 
 				<?php the_tags( 'Tags: ', ', ', ''); ?>
 
-			</div>
+			</div><br/><br/>
 
 			<?php edit_post_link('Edit this entry','','.'); ?>
 

@@ -36,6 +36,7 @@
 
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
 	<link href='http://fonts.googleapis.com/css?family=Gafata' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Scada' rel='stylesheet' type='text/css'>
 
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
@@ -54,9 +55,8 @@
 		</div>
 		<div class="column10 upperdecklinks">
 			<ul id="toplinks">
-				<li><a href="#">My Account</a></li>
-				<li><a href="#">Create an Account</a></li>
-				<li><a href="#">Contact Us</a></li>
+				<li><a href="http://localhost/graciesgenes/my-account/">My Account</a></li>
+				<li><a href="http://localhost/graciesgenes/contact-us/">Contact Us</a></li>
 				<?php global $woocommerce; ?>
 				<li class="carticon"><a href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>"><?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?> - <?php echo $woocommerce->cart->get_cart_total(); ?></a></li>
 			</ul>
