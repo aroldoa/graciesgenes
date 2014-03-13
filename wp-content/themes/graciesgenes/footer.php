@@ -17,16 +17,42 @@
 		</div>
 		<div class="column4">
 			<h5>Recent Articles</h5>
+
+
+			<?php
+
+$args = array(
+	'post_type' => 'post',
+	'showposts' => '2'
+);
+
+ // the query
+ $the_query = new WP_Query( $args ); ?>
+
+
+
 			<ul class="recentarticles">
-				<li><a href="#">
-					<div class="post-title">How to dress up and go to the radio but make sure you stand out from the crowd!</div>
-					<div class="post-date">1.31.2014</div>
+
+	  <?php if ( $the_query->have_posts() ) : ?>
+
+  <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+				<li><a href="<?php the_permalink() ?>">
+					<div class="post-title"><?php the_title();?></div>
+					<div class="post-date"><?php the_date();?></div>
 				</a></li>
-				<li><a href="#">
-					<div class="post-title">How to dress up and go to the radio but make sure you stand out from the crowd!</div>
-					<div class="post-date">1.31.2014</div>
-				</a></li>
+<?php endwhile; ?>
+
+  <?php wp_reset_postdata(); ?>
+
+<?php else:  ?>
+  <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+<?php endif; ?>
+
 			</ul>
+
+
+
 		</div>
 		<div class="column4">
 			<h5>Instagram</h5>

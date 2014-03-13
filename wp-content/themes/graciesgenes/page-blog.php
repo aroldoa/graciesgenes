@@ -11,7 +11,7 @@
 get_header(); ?>
 
 <div class="product-pages">
-	<?php get_sidebar('page'); ?>
+	<?php get_sidebar('post'); ?>
 </div><!-- end of sidebar area -->
 
 <div class="product-category">

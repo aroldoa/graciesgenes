@@ -15,10 +15,12 @@
 
 				<h3><?php the_title(); ?></h3>
 
-				<div class="entry-result">
+				<div class="post-entry">
 
 					<?php the_excerpt(); ?><br/>
 					<p><a href="<?php the_permalink() ?>">Read More...</a></p>
+
+					<hr/>
 
 				</div>
 
